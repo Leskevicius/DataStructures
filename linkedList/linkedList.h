@@ -6,8 +6,8 @@ by Rokas Leskevicius
 **type used must have <<, == overloaded**
 
 */
-//#ifndef __LINKEDLIST_H
-//#define __LINKEDLIST_H
+#ifndef __LINKEDLIST_H
+#define __LINKEDLIST_H
 
 #include <iostream>
 #include <string>
@@ -17,7 +17,7 @@ using namespace std;
 
 template <class T>
 class node {
-protected:
+private:
 	T data;				//data to be contained in the node
 	node<T>* next;		//link to the next node
 public:
@@ -40,7 +40,7 @@ public:
 	string toStr();			//returns a string with all its elements
 };							//seperated by new lines
 
-//#endif
+#endif
 
 
 //***********************node methods***********************//
@@ -124,17 +124,4 @@ string linkedList<T>::toStr() {
 	}
 	string s(ss.str());
 	return s;						//finally return the string of streams content
-}
-
-int main() {
-	linkedList<char> ll = linkedList<char>();
-	for (char i = 'a'; i < 'z'; i++) {
-		ll.insert(i);
-	}
-	cout << ll.toStr();
-	ll.remove('a');
-	cout << ll.toStr();
-	ll.remove('b');
-
-	return 0;
 }
