@@ -5,5 +5,6 @@ So far we have these data structures:
 
 -template Linked List <br \>
 -template Stack <br \>
--string (key,value) Binary Search Tree (Will be updated to template). <br \>
+-Binary Search Tree for string (key,value) (Will be updated to template). <br \>
+-hash table for use with strings <br \>
  
